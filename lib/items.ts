@@ -19,9 +19,12 @@ export function getRandomItem(deck: Item[], played: Item[]): Item {
   const avoidPeople = Math.random() > 0.5;
 
   const candidates = deck.filter((candidate) => {
-    if (avoidPeople && candidate.instance_of.includes("human")) {
-      return false;
+    if (candidate.instance_of.includes("human")) {
+      if(avoidPeople) return false;
+      if(candidate.occupations.includes("actor")) return false;
     }
+    
+    if (candidate.instance_of.includes("public company") return false;
 
     if (candidate.year < fromYear || candidate.year > toYear) {
       return false;
