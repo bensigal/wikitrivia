@@ -7,7 +7,9 @@ export function getRandomItem(deck: Item[], played: Item[]): Item {
   });
 
   const periods: [number, number][] = [
-    [-100000, 1400],
+    [-100000, -3000],
+    [-3000, 500],
+    [500, 1400],
     [1400, 1850],
     [1850, 1930],
     [1930, 2020],
